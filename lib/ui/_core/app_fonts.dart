@@ -23,4 +23,46 @@ abstract class AppFonts {
     fontWeight: FontWeight.w500,
     color: AppColors.grayTextColor,
   );
+
+  static TextStyle bodyLarge = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: AppColors.grayTextColor,
+  );
+
+  static TextStyle bodyMedium = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: AppColors.grayTextColor,
+  );
+
+    static TextStyle bodySmall = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.grayTextColor,
+  );
+
+  static TextStyle labelLarge = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.grayTextColor,
+  );
+
+  static TextStyle labelMedium = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.grayTextColor,
+  );
+
+    static TextStyle labelSmall = const TextStyle(
+    fontFamily: 'Roboto',
+    fontSize: 11,
+    fontWeight: FontWeight.w500,
+    color: AppColors.grayTextColor,
+  );
 }

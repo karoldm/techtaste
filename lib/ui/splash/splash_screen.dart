@@ -30,7 +30,7 @@ class SplashScreen extends StatelessWidget {
                         TextSpan(
                           text: " melhor experiência culinária!", 
                           style: AppFonts.titleLarge.copyWith(
-                            color: AppColors.orangeMediumColor,
+                            color: AppColors.primaryMediumColor,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -40,7 +40,9 @@ class SplashScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: (){}, 
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, "/home");
+                      }, 
                       child: Text("Bora!", 
                         style: AppFonts.titleMedium.copyWith(
                           color: AppColors.backgroundColor,
