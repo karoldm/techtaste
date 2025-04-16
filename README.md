@@ -12,7 +12,6 @@ Techtaste is a delivery app where users can shopping your favorite dishes easly.
 
 - [![Dart][Dart]][Dart-url]
 
-<br />
 
 ### Dependencies
 
