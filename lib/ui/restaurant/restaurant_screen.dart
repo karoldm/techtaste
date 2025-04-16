@@ -33,6 +33,7 @@ class RestaurantScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     Dish dish = restaurant.dishes[index];
                     return ListTile(
+                      contentPadding: const EdgeInsets.all(0.0),
                       leading: Image.asset(
                         "assets/${dish.imagePath}", 
                         errorBuilder: (context, error, stackTrace) => 
