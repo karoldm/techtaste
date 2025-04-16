@@ -5,6 +5,7 @@ import 'package:techtaste/data/categories_data.dart';
 import 'package:techtaste/data/restaurants_data.dart';
 import 'package:techtaste/ui/_core/app_colors.dart';
 import 'package:techtaste/ui/_core/app_fonts.dart';
+import 'package:techtaste/ui/_core/widgets/app_bar.dart';
 import 'package:techtaste/ui/home/widgets/category_widget.dart';
 import 'package:techtaste/ui/home/widgets/restaurant_widget.dart';
 
@@ -17,12 +18,8 @@ class HomeScreen extends StatelessWidget {
     RestaurantsData restaurantsData = Provider.of<RestaurantsData>(context);
 
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(
-        actions: [
-          IconButton(icon: const Icon(Icons.shopping_cart), onPressed: (){}),
-        ],
-      ),
+      drawer: const Drawer(),
+      appBar: getAppBar(context: context),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
@@ -36,7 +33,7 @@ class HomeScreen extends StatelessWidget {
               const TextField(
                 decoration: InputDecoration(
                   hintText: "O que você deseja comer?",
-                  prefixIcon: const Icon(Icons.search),
+                  prefixIcon: Icon(Icons.search),
                 ),
               ),
               Text("Escolha por categoria", style: AppFonts.titleMedium),
@@ -63,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 64),
+              const SizedBox(height: 64),
             ],
           ),
         ),

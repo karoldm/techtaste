@@ -14,27 +14,32 @@ class RestaurantWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      spacing: 16,
-      children: [
-        Image.asset("assets/${restaurant.imagePath}",
-          width: 88,
-          height: 88,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(restaurant.name, 
-              style: AppFonts.titleSmall.copyWith(color: AppColors.primaryMediumColor)),
-            Row(
-              children: List.generate(restaurant.stars.toInt(), (index) {
-                  return const Icon(Icons.star, color: Colors.amber);
-                }),
-            ),
-            Text('${restaurant.distance}km', style: AppFonts.titleSmall),
-          ],
-        ),
-      ],
+    return InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, '/restaurant', arguments: restaurant);
+        },
+        child: Row(
+        spacing: 16,
+        children: [
+          Image.asset("assets/${restaurant.imagePath}",
+            width: 88,
+            height: 88,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(restaurant.name, 
+                style: AppFonts.titleSmall.copyWith(color: AppColors.primaryMediumColor)),
+              Row(
+                children: List.generate(restaurant.stars.toInt(), (index) {
+                    return const Icon(Icons.star, color: Colors.amber);
+                  }),
+              ),
+              Text('${restaurant.distance}km', style: AppFonts.titleSmall),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

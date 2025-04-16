@@ -1,3 +1,5 @@
+import 'package:techtaste/model/dish.dart';
+
 class Restaurant {
   final String id;
   final String imagePath;
@@ -6,6 +8,7 @@ class Restaurant {
   final double stars;
   final int distance;
   final List<String> categories;
+  final List<Dish> dishes;
 
   const Restaurant({
     required this.id,
@@ -15,6 +18,7 @@ class Restaurant {
     required this.stars,
     required this.distance,
     required this.categories,
+    required this.dishes,
   });
 
   Map<String, dynamic> toMap(){
@@ -26,6 +30,7 @@ class Restaurant {
       'stars': stars,
       'distance': distance,
       'categories': categories,
+      'dishes': dishes.map((dish) => dish.toMap()).toList(),
     };
   }
 
@@ -38,6 +43,7 @@ class Restaurant {
       stars: (map['stars'] as num).toDouble(),
       distance: map['distance'] as int,
       categories: List<String>.from(map['categories']),
+      dishes: List.from(map['dishes'].map((dish) => Dish.fromMap(dish))),
     );
   }
 
