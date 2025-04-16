@@ -1,6 +1,6 @@
 # techtaste
 
-Techtaste is a simples only interface delivery app where users can shopping your favorite dishes easly. The app was developed on Alura Imersion Flutter 2025! 
+Techtaste is a simples only interface delivery app where users can shopping your favorite dishes easly. The app was developed on Alura Immersion Flutter 2025! 
 
 https://github.com/user-attachments/assets/36f63b70-53b1-4131-9918-7805a0d9ef88
 
